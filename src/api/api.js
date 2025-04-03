@@ -2,7 +2,7 @@ import axios from "axios"
 
 const ncNewsApi = axios.create({
     baseURL: "https://nc-news-5kyq.onrender.com",
-    timeout: 1000,
+    timeout: 3000,
   });
 
 export const getArticles=()=>
@@ -12,3 +12,10 @@ export const getArticles=()=>
     })
 }
 
+
+export const getSingleArticle=(articleId)=>
+{
+        return ncNewsApi.get(`/api/articles/${articleId}`).then(({data})=>{
+        return data.article;
+    })
+}
