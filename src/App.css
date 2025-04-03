@@ -6,6 +6,8 @@
   padding: 2rem;
   text-align: center;
   justify-content: center;
+  background-color:8A84E2;
+
 }
 
 .link {
@@ -83,3 +85,13 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.commentsformat{
+  align-items: left;
+  justify-content:left;
+  text-align: left;
+  color:darkcyan;
+  background-color:aliceblue;
+}
+
