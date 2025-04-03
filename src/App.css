@@ -11,6 +11,7 @@
 .link {
   box-sizing: border-box;
   padding: 5px;
+  font-size:larger;
 }
 
 .container-nav {

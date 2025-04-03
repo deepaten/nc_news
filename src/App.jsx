@@ -8,12 +8,13 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Articles from './components/Articles';
 import Home from './components/Home';
+import SingleArticle from './components/SingleArticle';
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <>
+    
       <div className='App'>
         <Header />
 
@@ -21,15 +22,13 @@ function App() {
       
           { <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/api/articles" element={<Articles />} />
-          <Route path="/api/articles/:article_id" element={<Articles />} />
+          <Route path="/api/articles" element={<Articles />} />                 
+          <Route path="/api/articles/:article_id" element={<SingleArticle />} />                 
           </Routes>  }
        
         <Footer/>
 
       </div>
-
-    </>
   )
 }
 
