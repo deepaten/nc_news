@@ -9,8 +9,10 @@ import Footer from './components/Footer'
 import Articles from './components/Articles';
 import Home from './components/Home';
 import SingleArticle from './components/SingleArticle';
+import ArticleComments from './components/ArticleComments';
 
 function App() {
+
 
 
   return (
@@ -23,7 +25,9 @@ function App() {
           { <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/api/articles" element={<Articles />} />                 
-          <Route path="/api/articles/:article_id" element={<SingleArticle />} />                 
+          <Route path="/api/articles/:article_id" element={<SingleArticle />} />  
+          <Route path="/api/articles/:article_id/comments" element={<ArticleComments />} />                           
+          
           </Routes>  }
        
         <Footer/>

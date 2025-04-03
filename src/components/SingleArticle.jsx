@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import { getSingleArticle } from "../api/api"
 import { useParams } from "react-router-dom"
+import ArticleComments from "./ArticleComments"
+import CommentsFormat from "./CommentsFormat"
 
 function SingleArticle() {
     const [singleArticle, setArticle] = useState([])
@@ -39,8 +41,12 @@ function SingleArticle() {
                 <h5>Author: {singleArticle.author}</h5>
                 <label htmlFor="Votes">Votes</label>
                 <p>{singleArticle.votes}</p>
-            </section>
-
+            </section >
+            <h2>Article Comments</h2>
+            <CommentsFormat>
+               <ArticleComments  article_id={article_id} />
+               </CommentsFormat>
+            
         </div>
     );
 }

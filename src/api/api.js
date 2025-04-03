@@ -19,3 +19,11 @@ export const getSingleArticle=(articleId)=>
         return data.article;
     })
 }
+
+export const getArticleComments=(articleId)=>
+    {
+            return ncNewsApi.get(`/api/articles/${articleId}/comments`).then(({data})=>{
+            return data.comments;
+        })
+    }
+
