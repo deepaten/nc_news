@@ -12,7 +12,6 @@ function ArticleComments({article_id}) {
         getArticleComments(article_id)
         .then((comments)=>{
             setComments(comments)
-            console.log(comments, " >>> comments")
             setIsLoading(false)
         })
         .catch((error)=>{
@@ -33,7 +32,7 @@ function ArticleComments({article_id}) {
             articleComments.map((comment)=>{ 
                 
             return   (                     
-                <li key={comment.comment_id}>{comment.body}</li>
+                <p key={comment.comment_id}>{comment.body}</p>
                 )
         })
        )
