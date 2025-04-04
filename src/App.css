@@ -95,3 +95,9 @@
   background-color:aliceblue;
 }
 
+.container{
+  
+  white-space: initial;
+  color: chocolate;
+  font-size: larger;
+}

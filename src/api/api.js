@@ -27,3 +27,23 @@ export const getArticleComments=(articleId)=>
         })
     }
 
+    export const patchArticleVotes=(articleId, addReduce)=>
+    {
+        let votes = 1;
+        if (addReduce === "add")
+        {
+            votes = 1
+        }
+        else{
+            votes = -1
+        }
+            return ncNewsApi.patch(`/api/articles/${articleId}`,{inc_votes: votes}).then(({data})=>{
+            return data.article;
+        })
+    }
+
+
+
+
+
+
